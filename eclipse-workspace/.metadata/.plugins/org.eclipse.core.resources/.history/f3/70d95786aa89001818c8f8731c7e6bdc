@@ -1,0 +1,24 @@
+package com.visa.prj.client;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import com.visa.prj.entity.Book;
+
+public class SetExample {
+
+	public static void main(String[] args) {
+		Set<Book> books= new HashSet<>();
+
+		books.add(new Book(144,"Hibernate in Action",1200.00));
+		books.add(new Book(809,"ALchemist",890.00));
+		books.add(new Book(713,"Java Concurrency",500.00));
+		books.add(new Book(623,"GOT",900.00));
+		books.add(new Book(809,"ALchemist",890.00));//4 values will only be there
+		for(Book b:books) {
+			System.out.println(b);
+		}
+
+	}
+
+}

@@ -1,0 +1,28 @@
+package com.visa.prj.client;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class MapTask {
+
+	public static void main(String[] args) {
+		String report="Ramesh sold 500 products of iPhone each costing 98000";
+		Map<String,Integer> map= new HashMap<>();
+		int c=0,p=0;
+		for(String word:report.split(" ")) {
+			if(Integer.parseInt( word)){
+				p++;
+			}
+			else{
+				c++;
+			}
+			
+		}
+		map.put("Words",c);
+		map.put("Numbers", p);
+		map.forEach((k,v)->{
+			System.out.println(k+" : "+v);
+		});
+	}
+
+}

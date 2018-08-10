@@ -1,0 +1,36 @@
+package com.visa.prj.client;
+
+import javax.persistence.EntityManager;
+
+import com.visa.prj.dao.DaoException;
+import com.visa.prj.dao.EmployeeDao;
+import com.visa.prj.dao.EmployeeDaoJpaImpl;
+import com.visa.prj.dao.IssueDao;
+import com.visa.prj.dao.IssueDaoPjaImpl;
+import com.visa.prj.entity.Employee;
+import com.visa.prj.util.JPAUtil;
+
+public class EmployeeClient {
+
+	public static void main(String[] args) {
+		//EmployeeDao dao= new EmployeeDaoJpaImpl();
+		 
+		Employee e1= new Employee(0,"Harshita Mritunjay","harshita@visa.com");
+		
+		
+		EntityManager em= JPAUtil.getEntityManager();
+		em.getTransaction().begin();
+			em.persist(e1);
+		em.getTransaction().commit();
+		
+		
+		IssueDao issuedao= new IssueDaoPjaImpl();
+		try {
+			issuedao.raiseIssue();
+		} catch (DaoException e) {
+			
+			e.printStackTrace();
+		}
+	}
+
+}

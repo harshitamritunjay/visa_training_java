@@ -1,0 +1,18 @@
+package com.visa.prj.web;
+
+import java.beans.PropertyEditorSupport;
+
+public class AddressPropertyEditor extends PropertyEditorSupport {
+
+	@Override
+	public String getAsText() {
+		
+		return super.getAsText();
+	}
+
+	@Override
+	public void setAsText(String arg0) throws IllegalArgumentException {
+		super.setAsText(arg0);
+	}
+
+}

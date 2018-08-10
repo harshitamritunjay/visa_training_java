@@ -1,0 +1,31 @@
+package com.visa.prj.web;
+
+import java.beans.PropertyEditorSupport;
+
+import com.visa.prj.entity.Address;
+
+public class AddressPropertyEditor extends PropertyEditorSupport {
+
+	private Address address;
+	//object to UI
+	@Override
+	public String getAsText() {
+		
+		if(address==null) {
+			return "number;street;city";
+			
+		}
+		return address.getNumber()+"; "+address.getStreet()+"; "+address.getCity();
+	}
+	//UI to object 
+	@Override
+	public void setAsText(String text) throws IllegalArgumentException {
+		String[] data = text.split(";");
+		address= new Address();
+		address.setNumber(data[0]);
+		address.setStreet(data[1]);
+		address.setCity(data[2]);
+		setValue(address);
+	}
+
+}

@@ -1,0 +1,7 @@
+package com.visa.prj.dao;
+
+public interface VehicleDao {
+
+	void addVehicle(Vehicle v);
+	List<String> getRegNos();
+}

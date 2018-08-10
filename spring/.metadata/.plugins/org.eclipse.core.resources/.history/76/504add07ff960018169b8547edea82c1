@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-2.2.4.js"
+	integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+	crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js">
+</script>
+</head>
+<body>
+	<div id="prds"></div>
+	<script type="text/javascript">
+		$(function() {
+			var prds$ = $("#prds");
+			var prdsTempl$;
+			$.getJSON("http://localhost:8080/api/products", function(products) {
+				$.get("templates/product.html",function(templ) {
+					 prdsTempl$ = templ;
+					 var content = Mustache.render(prdsTempl$, products);
+					 prds$.html(content);
+				 }); 
+			});
+			// $("#addBtn").click()
+			// handle button click
+			$(document).on("click","#addBtn", function() {
+				var order = {};
+				var customer = {};
+				customer.email = sessionStorage.getItem("user");
+				order.customer = customer;
+				order.total = 0.0;
+				//var items$ = [];
+				order.items = []
+				$(".items:checked").each(function() {
+					var data = this.value.split(";");
+					var item = {};
+					var product = {};
+					product.id = data[0];
+					item.product = product;
+					item.amount = data[1] * 1; // price * qty
+					order.total += item.amount;
+					order.items.push(item);
+				});
+				//alert(sessionStorage.getItem("user") + " purchased : " + items$);
+				alert(JSON.stringify(order));
+				$.ajax({
+				    type: 'POST',
+				    url: 'api/orders',
+				    data: JSON.stringify(order),
+				    dataType: 'json',
+				    contentType:'application/json',
+				    success: function( resp ) {
+				      console.log( resp );
+				    }
+				  });
+			});
+		});
+	</script>
+</body>
+</html>

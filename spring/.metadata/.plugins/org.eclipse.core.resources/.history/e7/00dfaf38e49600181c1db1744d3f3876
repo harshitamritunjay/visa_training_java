@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<!-- jQuery cdn -->
+<script src="https://code.jquery.com/jquery-2.2.4.js"
+	integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+	crossorigin="anonymous"></script>
+<!-- Mustache cdn -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js">
+</script>
+</head>
+<body>
+<!--  for using mustache we need to use template, a main head class need to be there form there the subclasses can be there-->
+	
+	<div id="prds"></div>
+	<script type="text/javascript">
+		//document on ready function, when whole document will be loaded then only the functions will be called not before hand
+		$(function() {
+			var prds$ = $("#prds");
+			var prdsTempl$;
+			$.get("templates/product.html",function(templ)}{
+				prdsTempl$= templ;
+			});
+			/* jquery ajax call giving me json */
+			$.getJSON("http://localhost:8080/api/products", function(products) {
+				var content = Mustache.render(prdsTempl$, products);
+				prds$.html(content);
+			});
+		});
+	</script>
+</body>
+</html>

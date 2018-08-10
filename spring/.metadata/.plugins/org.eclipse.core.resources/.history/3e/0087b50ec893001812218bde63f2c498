@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns:aop="http://www.springframework.org/schema/aop"
+     xmlns:context="http://www.springframework.org/schema/context"
+     xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://www.springframework.org/schema/aop 
+         http://www.springframework.org/schema/aop/spring-aop-4.0.xsd 
+         http://www.springframework.org/schema/context
+         http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+	 <!--objects managed by spring container-beans  -->
+	 <!-- id name is one object with this name -->
+	 <bean id="p1" class="com.visa.prj.dao.ProductDaoJdbaImpl"></bean>
+	 
+	 <bean id="sampleService" class="com.visa.prj.service.SampleService">
+	 	<property name="productDao" ref="p1" /> 
+	 	<!-- the first id in line 15 is same as ref in line 18
+	 	it is equivalent to sampleService.setProductDao(p1) -->
+	 </bean>
+ 	
+</beans>

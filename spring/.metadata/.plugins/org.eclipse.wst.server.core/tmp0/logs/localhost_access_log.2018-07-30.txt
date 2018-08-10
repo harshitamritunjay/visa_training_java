@@ -1,0 +1,12 @@
+127.0.0.1 - - [30/Jul/2018:11:27:13 +0100] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [30/Jul/2018:11:27:14 +0100] "GET /spring_basic/index.jsp HTTP/1.1" 200 319
+0:0:0:0:0:0:0:1 - - [30/Jul/2018:11:27:22 +0100] "GET /spring_basic/first.do HTTP/1.1" 200 344
+0:0:0:0:0:0:0:1 - - [30/Jul/2018:11:29:26 +0100] "GET /spring_basic/first.do HTTP/1.1" 200 344
+127.0.0.1 - - [30/Jul/2018:12:40:52 +0100] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [30/Jul/2018:12:40:52 +0100] "GET /spring_basic/bookform.jsp HTTP/1.1" 500 2799
+0:0:0:0:0:0:0:1 - - [30/Jul/2018:12:41:29 +0100] "GET /spring_basic/bookform.jsp HTTP/1.1" 500 4486
+127.0.0.1 - - [30/Jul/2018:12:42:24 +0100] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [30/Jul/2018:12:42:24 +0100] "GET /spring_basic/bookform.jsp HTTP/1.1" 500 4235
+0:0:0:0:0:0:0:1 - - [30/Jul/2018:12:45:26 +0100] "GET /spring_basic/index.jsp HTTP/1.1" 200 354
+0:0:0:0:0:0:0:1 - - [30/Jul/2018:12:45:28 +0100] "GET /spring_basic/bookform.do HTTP/1.1" 200 814
+0:0:0:0:0:0:0:1 - - [30/Jul/2018:12:45:51 +0100] "POST /spring_basic/addBook.do HTTP/1.1" 200 354

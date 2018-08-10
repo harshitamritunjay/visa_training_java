@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Simple Web Application</title>
+</head>
+<body>
+	<h1>Simple web app</h1>
+	<a href="register.html">Registration</a> <br/> <!-- if not exist then error code 404 -->
+	<a href="first">First Servlet</a> <!--othing is extension then it will hand it over to engine  -->
+</body>
+</html>

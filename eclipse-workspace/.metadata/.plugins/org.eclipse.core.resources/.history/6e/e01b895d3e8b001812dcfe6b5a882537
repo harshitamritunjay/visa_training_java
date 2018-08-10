@@ -1,0 +1,43 @@
+package com.visa.prj.service;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+
+import com.visa.prj.dao.FetchException;
+import com.visa.prj.dao.PersistenceException;
+import com.visa.prj.dao.UserDao;
+import com.visa.prj.entity.User;
+
+import static org.mockito.Mockito.*;
+
+public class DataServiceTest {
+
+	private UserDao userDao = Mockito.mock(UserDao.class);
+
+	private DataService dataService;
+	@Before
+	public void setUp() throws Exception {
+		dataService = new DataService();
+		dataService.setUserDao(userDao);
+	}
+
+	@After
+	public void tearDown() throws Exception {
+	}
+
+	@Test
+	public void testAdd() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testRemove() {
+		fail("Not yet implemented");
+	}
+
+}

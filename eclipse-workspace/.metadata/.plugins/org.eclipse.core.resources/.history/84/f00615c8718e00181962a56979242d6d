@@ -1,0 +1,27 @@
+package com.visa.prj.client;
+
+import com.visa.prj.dao.DaoException;
+import com.visa.prj.dao.EmployeeDao;
+import com.visa.prj.dao.EmployeeDaoJpaImpl;
+import com.visa.prj.dao.IssueDao;
+import com.visa.prj.entity.Employee;
+
+public class EmployeeClient {
+
+	public static void main(String[] args) {
+		EmployeeDao dao= new EmployeeDaoJpaImpl();
+		 
+		Employee e1= new Employee(0,"Harshita Mritunjay","harshita@visa.com");
+		
+		try {
+			dao.addEmployee(e1);
+		} catch (DaoException e) {
+			
+			e.printStackTrace();
+		}
+		
+		IssueDao issuedao= new IssueDaoPjaImpl();
+		Issue 
+	}
+
+}

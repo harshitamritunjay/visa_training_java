@@ -1,0 +1,27 @@
+package com.visa.prj.dao;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+
+import com.visa.prj.entity.Customer;
+import com.visa.prj.util.JPAUtil;
+
+public class CustomerDaoJpaImpl implements CustomerDao {
+
+	@Override
+	public void addCustomer(Customer c) {
+		EntityManager em= JPAUtil.getEntityManager();
+		em.getTransaction().begin();
+			em.persist(c);
+		em.getTransaction().commit();
+
+	}
+
+	@Override
+	public List<Customer> getCustomers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

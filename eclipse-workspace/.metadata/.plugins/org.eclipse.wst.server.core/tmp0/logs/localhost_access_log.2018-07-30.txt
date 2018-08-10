@@ -1,0 +1,14 @@
+127.0.0.1 - - [30/Jul/2018:06:10:25 +0100] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [30/Jul/2018:06:10:28 +0100] "GET /chatapp/login.jsp HTTP/1.1" 200 523
+0:0:0:0:0:0:0:1 - - [30/Jul/2018:06:11:11 +0100] "GET /chatapp/login.jsp HTTP/1.1" 200 523
+0:0:0:0:0:0:0:1 - - [30/Jul/2018:06:11:11 +0100] "GET /favicon.ico HTTP/1.1" 404 1016
+0:0:0:0:0:0:0:1 - - [30/Jul/2018:06:11:19 +0100] "POST /chatapp/LoginServlet HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [30/Jul/2018:06:11:19 +0100] "GET /chatapp/chat.jsp HTTP/1.1" 500 2881
+0:0:0:0:0:0:0:1 - - [30/Jul/2018:06:11:56 +0100] "GET /chatapp/login.jsp HTTP/1.1" 200 523
+0:0:0:0:0:0:0:1 - - [30/Jul/2018:06:12:01 +0100] "POST /chatapp/LoginServlet HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [30/Jul/2018:06:12:02 +0100] "GET /chatapp/chat.jsp HTTP/1.1" 200 642
+0:0:0:0:0:0:0:1 - - [30/Jul/2018:06:12:07 +0100] "GET /chatapp/chat.jsp HTTP/1.1" 200 644
+0:0:0:0:0:0:0:1 - - [30/Jul/2018:06:12:12 +0100] "POST /chatapp/ChatServlet HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [30/Jul/2018:06:12:12 +0100] "GET /chatapp/chat.jsp HTTP/1.1" 200 666
+0:0:0:0:0:0:0:1 - - [30/Jul/2018:06:12:20 +0100] "POST /chatapp/ChatServlet HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [30/Jul/2018:06:12:20 +0100] "GET /chatapp/chat.jsp HTTP/1.1" 200 687

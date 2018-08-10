@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>Product Registration Form</h2>
+	<form action="addProduct.do" method="post">
+		Product Name<input type="text" name="name"/><br/>
+		Product Price<input type="number" name="price"/><br/>
+		Product Quantity<input type="number" name="quantity"/><br/>
+	</form>
+</body>
+</html>

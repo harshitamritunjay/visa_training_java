@@ -1,0 +1,8 @@
+package com.visa.prj.dao;
+
+public interface CustomerDao {
+
+	void addCustomer(Customer c);
+	List<String> getCustomers();
+	
+}

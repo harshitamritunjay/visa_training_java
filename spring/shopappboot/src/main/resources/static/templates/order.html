@@ -1,0 +1,15 @@
+{{#.}}
+Order Date: {{orderDate}} <br />
+Total : {{total}} <br />
+
+Customer:
+{{customer.email}} <br />
+{{customer.firstName }} <br />
+
+	Items <br />
+	{{#items}}
+	 {{itemId}} {{product.name}} {{product.price }} {{quantity}} {{amount}} <br />
+	
+	{{/items}}
+	<hr />
+{{/.}}

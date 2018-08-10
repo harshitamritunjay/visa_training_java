@@ -1,0 +1,19 @@
+package com.visa.prj.web;
+
+@RestController
+public class OrderController {
+	
+	@Autowired
+	private ShopService shopService;
+	
+	@RequestMapping(value="orders", method=RequestMethod.GET)
+	public @ResponseBody List<Order> getOrders() {
+		return shopService.getOrders();
+	}
+	
+	@RequestMapping(value="orders", method=RequestMethod.POST)
+	public ResponseEntity<Order> placeOrder(@RequestBody Order order) {
+		shopService.addOrder(order);
+		 return new ResponseEntity<Order>(order,HttpStatus.CREATED);
+	}
+}

@@ -1,0 +1,9 @@
+package com.visa.prj.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+@Transactional
+public class EventService {
+
+}
